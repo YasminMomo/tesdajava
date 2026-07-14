@@ -4,7 +4,7 @@ package Chapter1;
  * Toy Project
  * has property of name, brand, price and quantity
  * with a method to set the price of the toy
- */
+ **/
 
 public class Toy {
     String name;

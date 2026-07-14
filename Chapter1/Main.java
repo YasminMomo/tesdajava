@@ -1,13 +1,13 @@
 package Chapter1;
 
 public class Main {
-    public static void main(String[] args) { //main entry point psvm
-        Toy toy = new Toy(); //new object of Toy class and new instance of Toy class
-        toy.name = "Teddy Bear"; //state
-        toy.brand = "ABC Toys"; //state
-        toy.price = 19.99; //state
-        toy.quantity = 10; //state
 
-        System.out.println("Toy Name: " + toy.name + "\nBrand: " + toy.brand + "\nPrice: $" + toy.price + "\nQuantity: " + toy.quantity); //behavior
-    }
+   public static void main(String[] var0) {
+      Toy var1 = new Toy();
+      var1.name = "Teddy Bear";
+      var1.brand = "ABC Toys";
+      var1.price = 19.99;
+      var1.quantity = 10;
+      System.out.println("Toy Name: " + var1.name + "\nBrand: " + var1.brand + "\nPrice: $" + var1.price + "\nQuantity: " + var1.quantity);
+   }
 }
