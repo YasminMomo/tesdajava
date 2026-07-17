@@ -1,6 +1,6 @@
-package Chapter1;
+package chapter1;
 
-/*
+/**
  * Toy Project
  * has property of name, brand, price and quantity
  * with a method to set the price of the toy
