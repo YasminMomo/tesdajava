@@ -14,6 +14,8 @@ public class StringLesson {
         String name3 = new String("fluffy");
         System.out.println(a);
 
+        // String limit for max charseq. integer.maxvalue
+
 
         // String Methods
         // length()
@@ -96,5 +98,22 @@ public class StringLesson {
         System.out.println("abc".trim());
         System.out.println("\t   a b c\n");
         System.out.println("\t   a b c \n".trim());
+    
+    
+        System.out.println();
+        String sample1 = "abcd";
+        String sample2 = "abcd";
+        String sample3 = "abcd ";
+        //compile time
+        System.out.println(sample1==sample2); //True
+        System.out.println(sample1==sample3); // False
+        System.out.println(sample2==sample3); // False
+        //runtime
+        System.out.println(sample1.equals(sample2)); // True
+        System.out.println(sample1.equals(sample3)); // False
+        System.out.println(sample2.equals(sample3)); // False
+
+        System.out.println(sample1.equals(sample3.trim())); // True
+        System.out.println(sample2.equals(sample3.trim())); // True
     }
 }
