@@ -3,17 +3,17 @@ package chapter4;
 public class ReturnType {
     void startEngine() {
         System.out.println("Engine is running");
-        // return;
+        return; // can also be omitted
     }
 
     int getAge() {
         return (byte) 23; //  can return covariant types
         // return (long) 23; - incompatible
-        // System.out.println("Hello"); - unreachable code because return statement is before it
+        // System.out.println("Hello"); - unreachable code because return statement is placed before it
     }
 
     Avocado getAvocado() {
-        return null;
+        return new Avocado(); // can return an object
     }
 
     boolean oddOrEven(int a) {
@@ -27,6 +27,15 @@ public class ReturnType {
     }
 
     public static void main(String[] args) {
+        // Access Modifier Lesson
+        AccessModifier acm = new AccessModifier();
+        acm.greetMe();
+        // acm.greetMe2(); // can be used within its own class only
+        acm.greetMe3();
+        acm.greetMe4();
+
+        // Return Type Lesson
+        System.out.println();
         ReturnType rt = new ReturnType();
         System.out.println("Good Morning you are now " + rt.getAge() + " years old");
         int y = 1234567;
