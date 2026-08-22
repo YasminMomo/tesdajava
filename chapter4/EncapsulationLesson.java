@@ -15,12 +15,12 @@ public class EncapsulationLesson {
 }
 
 class Swan {
-    private int numberEggs;
-    public int getNumberEggs() { // getter
+    private int numberEggs; // private property
+    public int getNumberEggs() { // public getter
         return numberEggs;
     }
 
-    public void setNumberEggs(int numberEggs) { // setter
+    public void setNumberEggs(int numberEggs) { // public setter
         if (numberEggs >= 0) { // guard condition
             this.numberEggs = numberEggs;
         } else {
