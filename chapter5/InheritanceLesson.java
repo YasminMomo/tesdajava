@@ -84,6 +84,7 @@ class Wolf extends Canine {
     }
 }
 
+// Abstract
 abstract class Hayop {
     int age;
     String name;
@@ -93,14 +94,73 @@ abstract class Hayop {
 
     public abstract String getName(); // Abstract method - has no body
     abstract int getAge();
+    abstract void setAge(int age);
 }
 
-class Dog extends Hayop {
+abstract class Mammal extends Hayop {
+    abstract void sayImMammal();
+}
+
+class Dog extends Mammal {
     public String getName() { // The abstract method in parent class is required
         return name;
     }
 
     int getAge() {
         return age;
+    }
+
+    @Override
+    void sayImMammal() {
+        System.out.println("I'm a mammal");
+    }
+
+    public void setAge(int age) {
+        
+    }
+}
+
+// Interface
+abstract interface CanBurrow {
+    public static final int MINIMUM_DEPTH = 2;
+    public abstract int getMaximumDepth();
+}
+
+interface CanBurrow2 extends CanBurrow {
+    int MINIMUM_DEPTH2 = 2;
+    int getMaximumDepth2();
+
+    // 2 ways to declare a method body within an interface
+    default int getMinDepth() {
+        return 1;
+    }
+
+    static boolean isInWater() {
+        return false;
+    }
+}
+
+class FieldMouse extends Hayop implements CanBurrow, CanBurrow2 { // Multiple Inheritance
+    public int getMaximumDepth() {
+        return MINIMUM_DEPTH - 1;
+    }
+
+    public int getMaximumDepth2() {
+        return MINIMUM_DEPTH;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    int getAge() {
+        return age;
+    } 
+
+    @Override
+    void setAge(int age) {
+        
     }
 }
